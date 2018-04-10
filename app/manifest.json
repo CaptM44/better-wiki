@@ -11,5 +11,8 @@
         "matches": ["*://*.wikipedia.org/*"],
         "css": ["styles.css"]
     }],
+    "web_accessible_resources": [
+        "images/*.png"
+    ],
     "manifest_version": 2
 }
