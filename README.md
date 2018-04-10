@@ -1,1 +1,1 @@
-# better-wiki
+# Wikipedia Styling Chrome Extension
