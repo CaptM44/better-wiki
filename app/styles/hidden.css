@@ -1,0 +1,23 @@
+#mw-page-base,
+#mw-head-base,
+#mw-navigation,
+#footer {
+    display: none;
+}
+
+#siteSub,
+#contentSub,
+#jump-to-nav {
+    display: none;
+}
+
+.mw-editsection,
+sup.reference {
+    display: none;
+}
+
+.reflist,
+.reflist~*,
+#catlinks {
+    display: none !important;
+}

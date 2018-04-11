@@ -1,0 +1,32 @@
+#toc {
+    position: fixed;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    overflow: auto;
+    box-sizing: border-box;
+    border: 0;
+    padding: 1rem;
+    background: none;
+    min-height: 100%;
+    padding: 2rem;
+    border-right: 1px solid #ddd;
+}
+
+#toc:before {
+    content: '';
+    background-image: url(chrome-extension://__MSG_@@extension_id__/images/icon-128.png);
+    width: 100%;
+    height: 60px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 1rem;
+}
+
+.toctitle {
+    display: none;
+}
