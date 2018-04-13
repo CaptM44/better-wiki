@@ -8,8 +8,8 @@ body {
 }
 
 #content {
-    margin: 0;
-    max-width: 1200px;
+    margin: auto;
+    max-width: 1000px;
     border: none;
     padding: 3rem;
 }
@@ -21,6 +21,13 @@ body {
     margin-top: 0;
 }
 
+.infobox caption {
+    border: 1px solid #ddd;
+    border-bottom: none;
+    padding: .5rem 1rem;
+    font-weight: 600;
+}
+
 table.ambox {
     margin: 0 !important;
     margin-bottom: 1rem !important;
@@ -29,7 +36,7 @@ table.ambox {
 table.ambox-content {
     border: none !important;
     border-left: .25rem solid #f28500 !important;
-    background: #eee !important;
+    background: #f6f8fa !important;
     padding: .5rem !important;
 }
 
@@ -37,18 +44,25 @@ table.ambox-content {
     display: none;
 }
 
+div.thumb {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
 div.thumbinner {
     background: #fff;
     border: 1px solid #ddd;
-    padding: .5rem;
+    padding: 0;
 }
 
 div.thumbinner img {
-    border: 1px solid #ddd;
+    border: none;
     width: 100%;
     height: auto;
+    padding: 0;
 }
 
 div.thumbinner .thumbcaption {
-    padding: .5rem;
+    border-top: 1px solid #ddd;
+    padding: .75rem 1rem;
 }

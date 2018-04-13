@@ -3,7 +3,7 @@
     display: block;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: calc(50% - 625px);
     width: 250px;
     overflow: auto;
     box-sizing: border-box;
@@ -12,7 +12,15 @@
     background: none;
     min-height: 100%;
     padding: 2rem;
+    border-right: 2px solid #eaecef;
     border-right: 1px solid #ddd;
+    /* box-shadow: 1px 0 2px #ddd; */
+}
+
+@media (max-width: 1250px) {
+    #toc {
+        left: 0;
+    }
 }
 
 #toc:before {
@@ -29,4 +37,44 @@
 
 .toctitle {
     display: none;
+}
+
+.tocnumber {
+    display: none;
+}
+
+#toc ul ul {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+#toc ul {
+    list-style: none;
+}
+
+.toctext {
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#toc::-webkit-scrollbar {
+    width: 10px;
+}
+
+#toc::-webkit-scrollbar-track {
+    background: none;
+}
+
+#toc:hover::-webkit-scrollbar-track {
+    background: #fafafa;
+}
+
+#toc::-webkit-scrollbar-thumb {
+    background: none;
+}
+
+#toc:hover::-webkit-scrollbar-thumb {
+    background: #e6e8ea;
 }
