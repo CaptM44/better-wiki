@@ -12,6 +12,13 @@
         "js": ["script.js"],
         "run_at": "document_start"
     }],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "permissions": [
+        "*://*.wikipedia.org/*",
+        "*://*.wiktionary.org/*"
+    ],
     "web_accessible_resources": [
         "images/*.png",
         "styles/*.css"

@@ -42,6 +42,14 @@ table.ambox {
     margin-bottom: 1rem !important;
 }
 
+table.ombox {
+    margin: 0;
+    margin-bottom: 1rem;
+    border: 0;
+    background: #f6f8fa;
+    width: 100%;
+}
+
 table.ambox-content {
     border: none !important;
     border-left: .25rem solid #f28500 !important;
@@ -55,7 +63,7 @@ table.ambox-content {
 
 div.thumb {
     margin-top: 0;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
 div.thumbinner {

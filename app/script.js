@@ -7,7 +7,8 @@ function loadCss(path) {
     var link = document.createElement("link");
     link.rel = 'stylesheet'
     link.type = 'text/css'
-    link.href = chrome.extension.getURL(path);;
+    link.href = chrome.extension.getURL(path);
+    link.classList.add("injectedCss");
 
     document.documentElement.appendChild(link)
     setTimeout(t => document.documentElement.appendChild(link));
