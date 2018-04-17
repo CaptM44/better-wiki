@@ -16,6 +16,8 @@ body {
     max-width: 1000px;
     border: none;
     padding: 3rem;
+    border-left: 1px solid #ddd;
+    min-height: 100%;
 }
 
 .mw-body-content {

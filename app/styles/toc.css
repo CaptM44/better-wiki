@@ -10,11 +10,10 @@
     position: fixed;
     display: block;
     top: 0;
-    bottom: 0;
     left: calc(50% - 625px);
     width: 250px;
     padding: 1rem;
-    border-right: 1px solid #ddd;
+    border: none;
     z-index: -1;
 }
 
@@ -31,14 +30,27 @@
     left: calc(50% - 625px);
     width: 250px;
     overflow: auto;
-    border: 0;
+    border: none;
     background: none;
     padding: 2rem;
 }
 
 @media (max-width: 1250px) {
+    #mw-panel {
+        left: 0;
+    }
     #toc {
         left: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    #mw-panel,
+    #toc {
+        display: none;
+    }
+    body {
+        margin-left: 0;
     }
 }
 
