@@ -8,7 +8,7 @@
         "128": "images/icon-128.png"
     },
     "content_scripts": [{
-        "matches": ["*://*.wikipedia.org/*"],
+        "matches": ["*://*.wikipedia.org/*", "*://*.wiktionary.org/*"],
         "js": ["script.js"],
         "run_at": "document_start"
     }],
