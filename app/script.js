@@ -3,6 +3,12 @@ loadCss('/styles/toc.css');
 loadCss('/styles/hidden.css');
 loadCss('/styles/markdown.css');
 
+loadOptions(function (options) {
+    if (options.fixedNav) {
+        loadCss('/styles/fixedNav.css');
+    }
+})
+
 function loadCss(path) {
     var link = document.createElement("link");
     link.rel = 'stylesheet'
@@ -12,4 +18,12 @@ function loadCss(path) {
 
     document.documentElement.appendChild(link)
     setTimeout(t => document.documentElement.appendChild(link));
+}
+
+function loadOptions(cb) {
+    var defaultOptions = {
+        fixedNav: true,
+    }
+
+    chrome.storage.sync.get(defaultOptions, cb);
 }
