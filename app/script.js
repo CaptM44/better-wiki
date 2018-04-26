@@ -5,7 +5,18 @@ loadCss('/styles/markdown.css');
 
 loadOptions(function (options) {
     if (options.fixedNav) {
-        loadCss('/styles/fixedNav.css');
+        // loadCss('/styles/fixedNav.css');
+        document.addEventListener('scroll', function () {
+            var toc = document.getElementById('toc')
+
+            if (document.documentElement.scrollTop > 192) {
+                toc.style.position = 'fixed';
+                toc.style.top = '0px';
+            } else {
+                toc.style.position = 'absolute';
+                toc.style.top = '192px';
+            }
+        })
     }
 })
 

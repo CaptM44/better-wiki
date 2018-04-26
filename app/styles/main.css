@@ -23,6 +23,7 @@ body {
 .mw-body-content {
     line-height: inherit;
     font-size: inherit;
+    position: static;
 }
 
 .infobox {
