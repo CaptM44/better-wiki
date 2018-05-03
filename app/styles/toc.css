@@ -14,7 +14,6 @@
     width: 250px;
     padding: 1rem;
     border: none;
-    z-index: -1;
 }
 
 #p-logo,
@@ -25,13 +24,15 @@
 #toc {
     position: absolute;
     display: block;
-    top: 175px;
+    top: 200px;
     left: calc(50% - 625px);
     width: 250px;
     overflow: auto;
     border: none;
     background: none;
     padding: 2rem;
+    padding-top: 0;
+    padding-bottom: 1rem;
 }
 
 @media (max-width: 1250px) {
@@ -57,10 +58,6 @@
     display: none;
 }
 
-.tocnumber {
-    display: none;
-}
-
 #toc ul {
     padding: 0;
 }
@@ -74,11 +71,12 @@
     list-style: none;
 }
 
-.toctext {
-    display: block;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+#toc a {
+    text-decoration: none;
+}
+
+#toc a:hover .toctext {
+    text-decoration: underline;
 }
 
 #toc::-webkit-scrollbar {

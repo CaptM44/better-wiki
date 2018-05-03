@@ -9,13 +9,14 @@ loadOptions(function (options) {
         document.addEventListener('scroll', function () {
             var toc = document.getElementById('toc')
 
-            if (document.documentElement.scrollTop > 192) {
+            if (document.documentElement.scrollTop > 184) {
                 toc.style.position = 'fixed';
-                toc.style.top = '0px';
+                toc.style.top = '16px';
             } else {
                 toc.style.position = 'absolute';
-                toc.style.top = '192px';
+                toc.style.top = '200px';
             }
+            toc.style.bottom = '0px';
         })
     }
 })

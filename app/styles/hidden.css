@@ -15,6 +15,9 @@ sup.reference {
     display: none;
 }
 
+#Notes,
+#References,
+#External_links,
 .reflist,
 .reflist~*,
 #catlinks {
