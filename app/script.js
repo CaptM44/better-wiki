@@ -5,19 +5,27 @@ loadCss('/styles/markdown.css');
 
 loadOptions(function (options) {
     if (options.fixedNav) {
-        // loadCss('/styles/fixedNav.css');
-        document.addEventListener('scroll', function () {
-            var toc = document.getElementById('toc')
+        var toc = document.getElementById('toc');
+        toc.style.position = 'fixed';
+        var prevY = 0;
 
-            if (document.documentElement.scrollTop > 184) {
-                toc.style.position = 'fixed';
-                toc.style.top = '16px';
-            } else {
-                toc.style.position = 'absolute';
-                toc.style.top = '200px';
-            }
-            toc.style.bottom = '0px';
-        })
+        document.addEventListener('scroll', function () {
+            var y = window.pageYOffset || document.documentElement.scrollTop;
+            delta = y - prevY;
+            prevY = y;
+
+            var top = parseFloat(window.getComputedStyle(toc).top);
+            top -= delta;
+
+            var maxTop = y > 160 ? 0 : 160;
+            top = top > maxTop ? maxTop : top;
+
+            var minTop = window.innerHeight - toc.clientHeight;
+            minTop = minTop > 0 ? 0 : minTop;
+            top = top < minTop ? minTop : top;
+
+            toc.style.top = top + 'px';
+        });
     }
 })
 
@@ -29,7 +37,9 @@ function loadCss(path) {
     link.classList.add("injectedCss");
 
     document.documentElement.appendChild(link)
-    setTimeout(t => document.documentElement.appendChild(link));
+    setTimeout(function () {
+        document.documentElement.appendChild(link)
+    });
 }
 
 function loadOptions(cb) {

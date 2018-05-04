@@ -24,15 +24,13 @@
 #toc {
     position: absolute;
     display: block;
-    top: 200px;
+    top: 160px;
     left: calc(50% - 625px);
     width: 250px;
     overflow: auto;
     border: none;
     background: none;
     padding: 2rem;
-    padding-top: 0;
-    padding-bottom: 1rem;
 }
 
 @media (max-width: 1250px) {
