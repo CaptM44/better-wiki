@@ -17,13 +17,8 @@
     },
     "permissions": [
         "*://*.wikipedia.org/*",
-        "*://*.wiktionary.org/*",
-        "storage"
+        "*://*.wiktionary.org/*"
     ],
-    "options_ui": {
-        "page": "options.html",
-        "chrome_style": true
-    },
     "web_accessible_resources": [
         "images/*.png",
         "styles/*.css"
