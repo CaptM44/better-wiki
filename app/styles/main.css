@@ -57,7 +57,7 @@ table.ambox-content {
     border: none !important;
     border-left: .25rem solid #f28500 !important;
     background: #f6f8fa !important;
-    padding: .5rem !important;
+    padding: 0 .5rem !important;
 }
 
 .mbox-image {

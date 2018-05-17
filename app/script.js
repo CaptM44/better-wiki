@@ -15,3 +15,9 @@ function loadCss(path) {
         document.documentElement.appendChild(link);
     });
 }
+
+window.onload = function () {
+    var toc = document.getElementById('toc')
+    document.getElementById('mw-panel').appendChild(toc);
+    toc.style.display = 'block';
+}

@@ -2,49 +2,102 @@
     display: none;
 }
 
-#mw-panel .portal {
-    display: none;
-}
-
 #mw-panel {
     position: absolute;
     display: block;
     top: 0;
     left: calc(50% - 625px);
     width: 250px;
-    padding: 1rem;
+    padding: 1rem 2rem;
     border: none;
 }
 
 #p-logo,
 #p-logo a {
     width: 100%;
+    margin-bottom: 1.25rem;
+}
+
+#mw-panel .portal {
+    padding: 0;
+    margin: 0;
+    display: none;
+    margin-top: 0 !important;
+    margin-bottom: 1.5rem;
+}
+
+#mw-panel .portal .body {
+    margin: 0 !important;
+    background-image: none;
+}
+
+#mw-panel .portal .body ul {
+    padding: 0;
+}
+
+#mw-panel .portal:nth-child(2) {
+    display: block;
+}
+
+#toc .toctitle {
+    text-align: left;
+}
+
+#toc .toctitle h2,
+#mw-panel .portal h3 {
+    position: static !important;
+    font-size: .75em;
+    font-weight: 600;
+    margin: 0;
+    border-bottom: 0;
+    display: block !important;
+    padding: 0;
+    color: #000;
+    margin-bottom: .25rem;
+}
+
+#mw-panel .portal .body li {
+    line-height: inherit;
+    padding: 0;
+    font-size: 1em;
+    margin: 0;
+}
+
+#mw-panel .portal .body li+li {
+    margin-top: .25em;
+}
+
+#mw-panel .portal .body li a {
+    color: #0366d6 !important;
 }
 
 #toc {
-    position: absolute;
-    display: block;
-    top: 165px;
-    left: calc(50% - 625px);
-    width: 250px;
-    overflow: auto;
+    display: none;
+    width: 100%;
     border: none;
     background: none;
-    padding: 2rem;
+    padding: 0;
+    font-size: 1em;
+}
+
+#toc .toctoggle {
+    display: none;
+}
+
+#toc ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 @media (max-width: 1250px) {
     #mw-panel {
         left: 0;
     }
-    #toc {
-        left: 0;
-    }
 }
 
 @media (max-width: 700px) {
-    #mw-panel,
-    #toc {
+    #mw-panel {
         display: none;
     }
     body {
@@ -52,21 +105,9 @@
     }
 }
 
-.toctitle {
-    display: none;
-}
-
-#toc ul {
-    padding: 0;
-}
-
 #toc ul ul {
     margin: 0;
     padding-left: 1rem;
-}
-
-#toc ul {
-    list-style: none;
 }
 
 #toc a {
